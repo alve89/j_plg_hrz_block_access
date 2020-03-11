@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="system" method="upgrade" version="3.6">
+	<name>PLG_BLOCK_ACCESS_NAME</name>
+	<author>Stefan Herzog</author>
+	<creationDate>February 2017</creationDate>
+	<copyright>This plugin is released under the GNU/GPL License</copyright>
+	<license>GNU General Public License</license>
+	<authorEmail>joomla@devel.stefan-herzog.com</authorEmail>
+	<version>1.1.2</version>
+	<description>PLG_BLOCK_ACCESS_DESC</description>
+	<files>
+            <filename plugin="block_access">block_access.php</filename>
+	    <filename>index.html</filename>
+	    <folder>language</folder>	
+    	</files>
+	<config>
+            <fields name="params">
+                <fieldset name="basic">
+		            <field name="securitykey" type="password" size="50" default="" label="PLG_BLOCK_ACCESS_PASSWORD_LABEL" description="PLG_BLOCK_ACCESS_PASSWORD_DESC" />
+					<field name="text" type="textarea" size="50" default="Hier hat niemand etwas zu suchen!" label="PLG_BLOCK_ACCESS_TEXT_LABEL" description="PLG_BLOCK_ACCESS_TEXT_DESC" />
+					<field name="area" type="radio" default="site" label="Select an option" description="">
+					  <option value="site">SITE</option>
+					  <option value="admin">ADMIN</option>
+					  <option value="all">ALL</option>
+					</field>
+					<field name="typeOfBlock" type="radio" default="message" label="Select an option" description="">
+					  <option value="message">Message</option>
+					  <option value="errorpage">404</option>
+					</field>
+	        </fieldset>
+	    </fields>
+	</config>
+	<updateservers>
+		<server type="extension" name="BLOCKACCESSUPDATE">https://devel.stefan-herzog.com/joomla/update_plgs?plg_name=plg_block_access</server>
+	</updateservers>
+</extension>
