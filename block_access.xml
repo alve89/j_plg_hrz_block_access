@@ -31,6 +31,6 @@
 	    </fields>
 	</config>
 	<updateservers>
-		<server type="extension" name="BLOCKACCESSUPDATE">https://devel.stefan-herzog.com/joomla/update_plgs?plg_name=plg_block_access</server>
+		<server type="extension" name="BLOCKACCESSUPDATE">https://devel.stefan-herzog.com/joomla/update_plgs.xml.php?plg_name=plg_block_access&amp;name=block_access</server>
 	</updateservers>
 </extension>
