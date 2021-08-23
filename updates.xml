@@ -14,9 +14,9 @@
         <tags>
             <tag>stable</tag>
         </tags>
-        <maintainer>Joomla</maintainer>
-        <maintainerurl>https://devel.stefan-herzog.com</maintainerurl>
-        <targetplatform name="joomla" version="[34].[123456789]"/>
+        <maintainer>Stefan Herzog</maintainer>
+        <maintainerurl>https://github.com/alve89</maintainerurl>
+        <targetplatform name="joomla" version="4.[123456789]"/>
         <client>site</client>
     </update>
 </updates>
