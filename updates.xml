@@ -1,25 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <updates>
     <update>
-        <name>PLG_BLOCK_ACCESS_NAME</name>
+        <name>plg_block_access</name>
         <description></description>
-        <element>plg_block_access</element>
+        <element>block_access</element>
         <type>plugin</type>
-        <version>1.1.4</version>
+        <folder>system</folder>
         <client>0</client>
-        <infourl title="Block Access Plugin" />
+        <version>1.1.2</version>
         <downloads>
-            <downloadurl
-                type="full"
-                format="zip">
-                https://github.com/alve89/plg_block_access/archive/v1.1.4.zip
-            </downloadurl>
+            <downloadurl type="full" format="zip">https://github.com/alve89/plg_block_access/archive/v1.1.4.zip</downloadurl>
         </downloads>
         <tags>
             <tag>stable</tag>
         </tags>
-        <maintainer>Stefan Herzog</maintainer>
-        <maintainerurl>https://github.com/alve89/</maintainerurl>
-        <targetplatform name="joomla" version="[34].[0123456789]" />
+        <maintainer>Joomla</maintainer>
+        <maintainerurl>https://devel.stefan-herzog.com</maintainerurl>
+        <targetplatform name="joomla" version="[34].[123456789]"/>
+        <client>site</client>
     </update>
 </updates>
