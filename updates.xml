@@ -17,6 +17,5 @@
         <maintainer>Stefan Herzog</maintainer>
         <maintainerurl>https://github.com/alve89</maintainerurl>
         <targetplatform name="joomla" version="4.[123456789]"/>
-        <client>site</client>
     </update>
 </updates>
