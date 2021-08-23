@@ -11,13 +11,13 @@
             <downloadurl
                 type="full"
                 format="zip">
-                https://github.com/alve89/plg_block_access/archive/v0.0.14.zip
+                https://github.com/alve89/plg_block_access/archive/v1.1.4.zip
             </downloadurl>
         </downloads>
         <tags>
             <tag>stable</tag>
         </tags>
-        <maintainer>Snoeren Development</maintainer>
+        <maintainer>Stefan Herzog</maintainer>
         <maintainerurl>https://github.com/alve89/</maintainerurl>
         <targetplatform name="joomla" version="[34].[0123456789]" />
     </update>
