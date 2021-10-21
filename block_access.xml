@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="plugin" group="system" method="upgrade" version="3.8">
+<extension type="plugin" group="system" method="upgrade" version="[34].[123456789]">
 	<name>PLG_BLOCK_ACCESS_NAME</name>
 	<author>Stefan Herzog</author>
-	<creationDate>February 2017</creationDate>
+	<creationDate>October 2021</creationDate>
 	<copyright>This plugin is released under the GNU/GPL License</copyright>
 	<license>GNU General Public License</license>
 	<authorEmail>joomla@devel.stefan-herzog.com</authorEmail>
-	<version>1.1.4</version>
+	<version>1.1.5</version>
 	<description>PLG_BLOCK_ACCESS_DESC</description>
 	<files>
       <filename plugin="block_access">block_access.php</filename>
@@ -31,6 +31,6 @@
 	    </fields>
 	</config>
 	<updateservers>
-		<server type="extension" name="BLOCKACCESSUPDATE">https://raw.githubusercontent.com/alve89/plg_block_access/master/updates.xml</server>
+		<server type="extension" name="PLG_BLOCK_ACCESS_NAME">https://raw.githubusercontent.com/alve89/plg_block_access/master/updates.xml</server>
 	</updateservers>
 </extension>
