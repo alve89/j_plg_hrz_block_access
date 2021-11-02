@@ -13,45 +13,32 @@ jimport('joomla.error.exception');
 use Joomla\CMS\Uri\Uri;
 use Joomla\CMS\Application\CMSApplication;
 
-class plgSystemBlock_access extends JPlugin
-{
+class plgSystemBlock_access extends JPlugin {
 
-	function plgSystemBlock_access(& $subject, $config)
-	{
-		parent::__construct($subject, $config);
-	}
-
-
-	function onAfterInitialise() // onAfterDispatch()
-	{
+	function onAfterInitialise() { // onAfterDispatch()
 		$app		= JFactory::getApplication();
 		$user 	= JFactory::getUser();
 		$session= JFactory::getSession();
 
-		if (!$this->params->get('securitykey') || $session->get('block_access'))
-		{
+		if (!$this->params->get('securitykey') || $session->get('block_access')) {
 			return;
 		}
 		// Check if security key has been entered
 		$logged = isset($_GET[$this->params->get('securitykey')]);
 
 		// Check the current area the user wants so enter (site / admin)
-		if ($app->isClient('site'))
-		{
+		if ($app->isClient('site')) {
 			$area = "site";
 		}
 
-		if ($app->isClient('administrator'))
-		{
+		if ($app->isClient('administrator')) {
 			$area = "admin";
 		}
 
 		$securedArea = strtolower($this->params->get('area'));
 
-		if($area == $securedArea || $securedArea == "both")
-		{
-			if ($logged)
-			{
+		if($area == $securedArea || $securedArea == "both") {
+			if ($logged) {
 				$session = JFactory::getSession();
 				$session->set('block_access', true);
 	//			return true;
@@ -59,20 +46,15 @@ class plgSystemBlock_access extends JPlugin
 			else {
 				$this->blockArea();
 			}
-
 		}
-
 	}
 
-	function blockArea()
-	{
-		if($this->params->get('typeOfBlock') == "message")
-		{
+	function blockArea() {
+		if($this->params->get('typeOfBlock') == "message") {
 			header('HTTP/1.0 403 Forbidden');
 			die($this->params->get('text'));
 		}
-		elseif($this->params->get('typeOfBlock') == "errorpage")
-		{
+		elseif($this->params->get('typeOfBlock') == "errorpage") {
 			$uri = Uri::getInstance();
 			$url = $uri->toString();
 			(CMSApplication::getInstance('site'))->redirect(JUri::root(), 301);
