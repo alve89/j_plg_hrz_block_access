@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.6" type="plugin" group="system" method="upgrade">
-	<name>PLG_BLOCK_ACCESS_NAME</name>
+	<name>PLG_HRZ_BLOCK_ACCESS_NAME</name>
 	<author>Stefan Herzog</author>
 	<creationDate>October 2021</creationDate>
 	<copyright>This plugin is released under the GNU/GPL License</copyright>
 	<license>GNU General Public License</license>
 	<authorEmail>joomla@devel.stefan-herzog.com</authorEmail>
 	<version>1.1.8</version>
-	<description>PLG_BLOCK_ACCESS_DESC</description>
+	<description>PLG_HRZ_BLOCK_ACCESS_DESC</description>
 	<files>
       <filename plugin="block_access">block_access.php</filename>
 	    <filename>index.html</filename>
@@ -16,29 +16,29 @@
 	<config>
     <fields name="params">
         <fieldset name="basic">
-	        <field name="securitykey" type="password" size="50" default="" label="PLG_BLOCK_ACCESS_PASSWORD_LABEL" description="PLG_BLOCK_ACCESS_PASSWORD_DESC" />
+	        <field name="securitykey" type="password" size="50" default="" label="PLG_HRZ_BLOCK_ACCESS_PASSWORD_LABEL" description="PLG_HRZ_BLOCK_ACCESS_PASSWORD_DESC" />
 					<field name="area" type="radio" default="site" label="Select an option" description="">
 					  <option value="site">SITE</option>
 					  <option value="admin">ADMIN</option>
 					  <option value="all">ALL</option>
 					</field>
 					<field name="typeOfBlock" type="radio" default="message" label="Select an option" description="">
-					  <option value="message">401 Message</option>
-					  <option value="redirect">301 Redirect</option>
+					  <option value="message">PLG_HRZ_BLOCK_ACCESS_401_MESSAGE</option>
+					  <option value="redirect">PLG_HRZ_BLOCK_ACCESS_301_REDIRECT</option>
 					</field>
 					<field name="message"
 								 type="textarea"
 								 size="50"
 								 default="Hier hat niemand etwas zu suchen!"
-								 label="PLG_BLOCK_ACCESS_TEXT_LABEL"
-								 description="PLG_BLOCK_ACCESS_TEXT_DESC"
+								 label="PLG_HRZ_BLOCK_ACCESS_TEXT_LABEL"
+								 description="PLG_HRZ_BLOCK_ACCESS_TEXT_DESC"
 								 showon="typeOfBlock:message" />
 				 <field name="redirectUrl"
 								 type="url"
 								 size="50"
 								 placeholder="/path/relative/to/JoomlaRoot/"
-								 label="PLG_BLOCK_ACCESS_REDIRECTURL_LABEL"
-								 description="PLG_BLOCK_ACCESS_REDIRECTURL_DESC"
+								 label="PLG_HRZ_BLOCK_ACCESS_REDIRECTURL_LABEL"
+								 description="PLG_HRZ_BLOCK_ACCESS_REDIRECTURL_DESC"
 								 showon="typeOfBlock:redirect" />
 				</fieldset>
 	    </fields>
@@ -48,8 +48,12 @@
 		<language tag="de-DE">de-DE.plg_system_block_access.ini</language>
 		<language tag="de-DE">de-DE.plg_system_block_access.sys.ini</language>
 	</languages>
+	<languages folder="language/en-GB">
+		<language tag="en-GB">en-GB.plg_system_block_access.ini</language>
+		<language tag="en-GB">en-GB.plg_system_block_access.sys.ini</language>
+	</languages>
 
 	<updateservers>
-		<server type="extension" name="PLG_BLOCK_ACCESS">https://raw.githubusercontent.com/alve89/plg_block_access/master/updates.xml</server>
+		<server type="extension" name="PLG_HRZ_BLOCK_ACCESS_NAME">https://raw.githubusercontent.com/alve89/plg_block_access/master/updates.xml</server>
 	</updateservers>
 </extension>
