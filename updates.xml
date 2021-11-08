@@ -17,7 +17,7 @@
         </tags>
         <maintainer>Stefan Herzog</maintainer>
         <maintainerurl>https://github.com/alve89</maintainerurl>
-        <sha256>AC944392CADC7A0AE0FB87437942BBD587103872052FE66438961D4AC206E798</sha256>
+        <sha256>E41ADD7FA52ED1FEB1A7E2BF6B349EE97C622CE34818B9C3EED4DE8344B2861C</sha256>
         <targetplatform name="joomla" version="3.10"/>
         <targetplatform name="joomla" version="4.0"/>
     </update>
