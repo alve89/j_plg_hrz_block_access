@@ -6,6 +6,7 @@
 	<copyright>This plugin is released under the GNU/GPL License</copyright>
 	<license>GNU General Public License</license>
 	<authorEmail>joomla@devel.stefan-herzog.com</authorEmail>
+	<authorUrl>https://github.com/alve89</authorUrl>
 	<version>1.1.8</version>
 	<description>PLG_HRZ_BLOCK_ACCESS_DESC</description>
 	<files>
@@ -44,16 +45,14 @@
 	    </fields>
 	</config>
 
-	<languages folder="language/de-DE">
-		<language tag="de-DE">de-DE.plg_system_block_access.ini</language>
-		<language tag="de-DE">de-DE.plg_system_block_access.sys.ini</language>
-	</languages>
-	<languages folder="language/en-GB">
-		<language tag="en-GB">en-GB.plg_system_block_access.ini</language>
-		<language tag="en-GB">en-GB.plg_system_block_access.sys.ini</language>
+	<languages>
+		<language tag="de-DE">language/de-DE/de-DE.plg_system_block_access.ini</language>
+		<language tag="de-DE">language/de-DE/de-DE.plg_system_block_access.sys.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_system_block_access.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_system_block_access.sys.ini</language>
 	</languages>
 
 	<updateservers>
-		<server type="extension" name="PLG_HRZ_BLOCK_ACCESS_NAME">https://raw.githubusercontent.com/alve89/plg_block_access/master/updates.xml</server>
+		<server type="extension" name="PLG_HRZ_BLOCK_ACCESS_NAME">https://raw.githubusercontent.com/alve89/j_plg_hrz_block_access/master/updates.xml</server>
 	</updateservers>
 </extension>

@@ -1,6 +1,6 @@
 <?php
 /**
- * @version 	1.0.0
+ * @version 	1.1.8
  * @package 	Block Access
  * @copyright 	(c) 2017 Stefan Herzog
  * @license		GNU/GPL, http://www.gnu.org/licenses/gpl-3.0.html
@@ -17,6 +17,7 @@ use Joomla\CMS\Router\Route;
 class plgSystemBlock_access extends JPlugin {
 
 	private $securedArea = '';
+	private $correctKey = false;
 	private $currentUri = '';
 	private $redirectUri = '';
 
@@ -32,7 +33,7 @@ class plgSystemBlock_access extends JPlugin {
 			return;
 		}
 		// Check if security key has been entered
-		$correctKey = isset($_GET[$this->params->get('securitykey')]);
+		$this->correctKey = !is_null($app->input->get($this->params->get('securitykey')));
 
 		// Check the current area the user wants so enter (site / admin)
 		if ($app->isClient('site')) {
@@ -42,14 +43,10 @@ class plgSystemBlock_access extends JPlugin {
 			$area = "admin";
 		}
 
-		if(!is_null($this->params->get('redirectUrl'))) {
-			//$redirectUri->set
-		}
-
 		$this->securedArea = strtolower($this->params->get('area'));
 
 		if($area == $this->securedArea || $this->securedArea == "all") {
-			if($correctKey) {
+			if($this->correctKey) {
 				// Correct key was provided with URL
 				$session = JFactory::getSession();
 				$session->set('block_access', true);
