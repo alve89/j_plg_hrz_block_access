@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <updates>
     <update>
-        <name>PLG_HRZ_BLOCK_ACCESS_NAME</name>
+        <name>System - Block Access</name>
         <description></description>
         <element>block_access</element>
         <type>plugin</type>
