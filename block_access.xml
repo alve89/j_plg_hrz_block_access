@@ -18,7 +18,7 @@
     <fields name="params">
         <fieldset name="basic">
 	        <field name="securitykey" type="password" size="50" default="" label="PLG_HRZ_BLOCK_ACCESS_PASSWORD_LABEL" description="PLG_HRZ_BLOCK_ACCESS_PASSWORD_DESC" />
-					<field name="area" type="radio" default="site" label="Select an option" description="">
+					<field name="area" type="radio" default="admin" label="Select an option" description="">
 					  <option value="site">SITE</option>
 					  <option value="admin">ADMIN</option>
 					  <option value="all">ALL</option>
@@ -31,8 +31,8 @@
 								 type="textarea"
 								 size="50"
 								 default="Hier hat niemand etwas zu suchen!"
-								 label="PLG_HRZ_BLOCK_ACCESS_TEXT_LABEL"
-								 description="PLG_HRZ_BLOCK_ACCESS_TEXT_DESC"
+								 label="PLG_HRZ_BLOCK_ACCESS_401_MESSAGE_LABEL"
+								 description="PLG_HRZ_BLOCK_ACCESS_401_MESSAGE_DESC"
 								 showon="typeOfBlock:message" />
 				 <field name="redirectUrl"
 								 type="url"
