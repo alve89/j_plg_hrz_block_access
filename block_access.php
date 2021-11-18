@@ -16,6 +16,14 @@ use Joomla\CMS\Router\Route;
 
 class plgSystemBlock_access extends JPlugin {
 
+	/**
+	* Load the language file on instantiation.
+	*
+	* @var    boolean
+	* @since  3.1
+	*/
+	protected $autoloadLanguage = true;
+
 	private $securedArea = '';
 	private $correctKey = false;
 	private $currentUri = '';
@@ -23,36 +31,55 @@ class plgSystemBlock_access extends JPlugin {
 
 	function onAfterInitialise() { // onAfterDispatch()
 		$app		= JFactory::getApplication();
-		$user 	= JFactory::getUser();
+		//$user 	= JFactory::getUser();
 		$session= JFactory::getSession();
 
 		// Get current URL
 		 $this->currentUri = Uri::getInstance();
 
-		if (is_null($this->params->get('securitykey')) || $session->get('block_access')) {
+		if (is_null($this->params->get('securitykey')) || $session->get('block_access') ) {
 			return;
 		}
-		// Check if security key has been entered
-		$this->correctKey = !is_null($app->input->get($this->params->get('securitykey')));
+
+		// Get area to be blocked (configured in plugins settings)
+		$this->securedArea = strtolower($this->params->get('area'));
 
 		// Check the current area the user wants so enter (site / admin)
 		if ($app->isClient('site')) {
 			$area = "site";
+
+			// Check if a specific frontend-securitykey was configured
+			if(!is_null($this->params->get('securitykeyFrontend'))) {
+				// Check if FRONTEND security key has been entered
+				$this->correctKey = !is_null($app->input->get($this->params->get('securitykeyFrontend')));
+			}
+			else {
+				// Check if GENERAL security key has been entered
+				$this->correctKey = !is_null($app->input->get($this->params->get('securitykey')));
+			}
 		}
-		if ($app->isClient('administrator')) {
+		else if ($app->isClient('administrator')) {
 			$area = "admin";
+
+			// Check if GENERAL security key has been entered
+			$this->correctKey = !is_null($app->input->get($this->params->get('securitykey')));
+		}
+		else {
+			$area = 'all';
+			// Check if GENERAL security key has been entered
+			$this->correctKey = !is_null($app->input->get($this->params->get('securitykey')));
 		}
 
-		$this->securedArea = strtolower($this->params->get('area'));
+		if($area == $this->securedArea || $this->securedArea == 'all') {
+			// Area is blocked
 
-		if($area == $this->securedArea || $this->securedArea == "all") {
 			if($this->correctKey) {
 				// Correct key was provided with URL
-				$session = JFactory::getSession();
 				$session->set('block_access', true);
 				return;
 			}
 			else {
+				// Correct key was not provided -> block access
 				$this->setUris();
 				$this->blockArea();
 			}
