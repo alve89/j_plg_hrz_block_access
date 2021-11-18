@@ -93,7 +93,7 @@ class plgSystemBlock_access extends JPlugin {
 			return; // Actually pointless
 		}
 		elseif($this->params->get('typeOfBlock') == "redirect") {
-			// User is already on configured URL => don't do anything
+			// User is already on configured URL => don't do anything, otherwise the browser will raise a ERR_TOO_MANY_REDIRECTS error
 			if($this->currentUri->toString() == $this->redirectUri->toString()) return;
 		}
 		else {
