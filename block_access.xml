@@ -77,6 +77,8 @@
 		<language tag="de-DE">language/de-DE/de-DE.plg_system_block_access.sys.ini</language>
 		<language tag="en-GB">language/en-GB/en-GB.plg_system_block_access.ini</language>
 		<language tag="en-GB">language/en-GB/en-GB.plg_system_block_access.sys.ini</language>
+		<language tag="nl-NL">language/nl-NL/nl-NL.plg_system_block_access.ini</language>
+		<language tag="nl-NL">language/nl-NL/nl-NL.plg_system_block_access.sys.ini</language>
 	</languages>
 
 	<updateservers>
