@@ -17,8 +17,8 @@
         </tags>
         <maintainer>Stefan Herzog</maintainer>
         <maintainerurl>https://github.com/alve89</maintainerurl>
-        <!-- SHA for ZIP file -->
-        <sha256>6BD69D438EBF32E9864088D9776386A5E8577AFB47997A487473BF9F81BAD191</sha256>
+        <!-- SHA for data -->
+        <sha256>0D242BA76C436AB472E5A703D7B502346354F2BCF227B7784408033886B9C6A6</sha256>
         <targetplatform name="joomla" version="3.10"/>
         <targetplatform name="joomla" version="4.0"/>
     </update>
