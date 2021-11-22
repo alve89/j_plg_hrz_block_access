@@ -17,8 +17,8 @@
         </tags>
         <maintainer>Stefan Herzog</maintainer>
         <maintainerurl>https://github.com/alve89</maintainerurl>
-        <!-- SHA for data and names (folder content only -> files and language directory!) -->
-        <sha256>0C6C9832E428508126A78AB5D2BB8CA35F1132E8E0BD888AC1507DD257ECB28F</sha256>
+        <!-- SHA for ZIP file -->
+        <sha256>6BD69D438EBF32E9864088D9776386A5E8577AFB47997A487473BF9F81BAD191</sha256>
         <targetplatform name="joomla" version="3.10"/>
         <targetplatform name="joomla" version="4.0"/>
     </update>
