@@ -22,7 +22,7 @@
         <maintainer>Stefan Herzog</maintainer>
         <maintainerurl>https://github.com/alve89</maintainerurl>
         <!-- SHA for ZIP file -->
-        <sha256>062cd96ccf48c52a8d8a300a8b6afbc24674f8205e8abe57820e7ece8822fb2c</sha256>
+        <sha256>1d31bb1b9adb4243d0b4dc10af560e83aa00a57257714aea01fa3a93c7270303</sha256>
         <targetplatform name="joomla" version="3.10"/>
         <targetplatform name="joomla" version="4.4"/>
     </update>
