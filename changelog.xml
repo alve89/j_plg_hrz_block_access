@@ -4,7 +4,10 @@
         <type>plugin</type>
         <version>1.1.10</version>
         <change>
-            <item>Set compatibilty for Joomla! 4.4</item>
+            <item>Just some text</item>
         </change>
+        <note>
+            <item>This is a simple test</item>
+        </note>
       </changelog>
 </changelogs>
