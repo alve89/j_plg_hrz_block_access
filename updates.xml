@@ -7,7 +7,7 @@
         <type>plugin</type>
         <folder>system</folder>
         <client>0</client>
-        <version>1.1.11</version>
+        <version>1.1.10</version>
 
         <changelogurl>https://raw.githubusercontent.com/alve89/j_plg_hrz_block_access/master/changelog.xml</changelogurl>
         
