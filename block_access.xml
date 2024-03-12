@@ -7,7 +7,7 @@
 	<license>GNU General Public License</license>
 	<authorEmail>joomla@devel.stefan-herzog.com</authorEmail>
 	<authorUrl>https://github.com/alve89</authorUrl>
-	<version>1.1.10</version>
+	<version>1.1.11</version>
 	<description>PLG_HRZ_BLOCK_ACCESS_DESC</description>
 	<files>
       <filename plugin="block_access">block_access.php</filename>
