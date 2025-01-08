@@ -46,7 +46,6 @@
         </tags>
         <maintainer>Stefan Herzog</maintainer>
         <maintainerurl>https://github.com/alve89</maintainerurl>
-        <targetplatform name="joomla" version="[4].[0123456789]" />
-        <targetplatform name="joomla" version="[5].[0123456789]" />
+        <targetplatform name="joomla" version="[5].[23456789]" />
     </update>
 </updates>
