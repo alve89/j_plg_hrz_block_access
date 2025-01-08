@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="3.6" type="plugin" group="system" method="upgrade">
+<extension version="4" type="plugin" group="system" method="upgrade">
 	<name>PLG_HRZ_BLOCK_ACCESS_NAME</name>
 	<author>Stefan Herzog</author>
 	<creationDate>October 2021</creationDate>
@@ -9,11 +9,14 @@
 	<authorUrl>https://github.com/alve89</authorUrl>
 	<version>1.1.11</version>
 	<description>PLG_HRZ_BLOCK_ACCESS_DESC</description>
+	
+	<targetplatform name="joomla" version="^[45]\.[0-9]+$"/>
+
 	<files>
-      <filename plugin="block_access">block_access.php</filename>
-	    <filename>index.html</filename>
-	    <folder>language</folder>
-  </files>
+		<filename plugin="block_access">block_access.php</filename>
+		<filename>index.html</filename>
+	    	<folder>language</folder>
+  	</files>
 	<config>
 	    <fields name="params">
 	        <fieldset name="basic">
